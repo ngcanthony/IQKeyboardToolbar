@@ -1,0 +1,23 @@
+PODS:
+  - IQKeyboardCore (1.0.0)
+  - IQKeyboardToolbar (1.0.0):
+    - IQKeyboardCore
+
+DEPENDENCIES:
+  - IQKeyboardToolbar (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardCore
+
+EXTERNAL SOURCES:
+  IQKeyboardToolbar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IQKeyboardCore: 4c107a0b88b63a2808872f14b7faee351e39783d
+  IQKeyboardToolbar: f24b542843e18622a1b2369f7f9271eebe9ce5ae
+
+PODFILE CHECKSUM: 7dc60a98e1294b95b482166fead7d83e9b8f1920
+
+COCOAPODS: 1.15.2
