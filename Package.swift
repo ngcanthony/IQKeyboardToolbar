@@ -13,15 +13,19 @@ let package = Package(
             targets: ["IQKeyboardToolbar"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/hackiftekhar/IQKeyboardCore.git", from: "1.0.1"),
+    ],
     targets: [
         .target(name: "IQKeyboardToolbar",
-            path: "IQKeyboardToolbar",
-            resources: [
-                .copy("Assets/PrivacyInfo.xcprivacy")
-            ],
-            linkerSettings: [
-                .linkedFramework("UIKit")
-            ]
-        )
+                dependencies: ["IQKeyboardCore"],
+                path: "IQKeyboardToolbar",
+                resources: [
+                    .copy("Assets/PrivacyInfo.xcprivacy")
+                ],
+                linkerSettings: [
+                    .linkedFramework("UIKit")
+                ]
+               )
     ]
 )
