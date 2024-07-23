@@ -27,13 +27,13 @@ import Foundation
 
 /**
 `IQAutoToolbarBySubviews`
-Creates Toolbar according to subview's hierarchy of Textfield's in view.
+Creates Toolbar according to subview's hierarchy of textInputView's in view.
 
 `IQAutoToolbarByTag`
-Creates Toolbar according to tag property of TextField's.
+Creates Toolbar according to tag property of textInputView's.
 
 `IQAutoToolbarByPosition`
-Creates Toolbar according to the y,x position of textField in it's superview coordinate.
+Creates Toolbar according to the y,x position of textInputView in it's superview coordinate.
 */
 @available(iOSApplicationExtension, unavailable)
 @objc public enum IQAutoToolbarManageBehavior: Int {
@@ -44,14 +44,14 @@ Creates Toolbar according to the y,x position of textField in it's superview coo
 
 /**
  `IQPreviousNextDisplayModeDefault`
- Show NextPrevious when there are more than 1 textField otherwise hide.
- 
+ Show NextPrevious when there are more than 1 textInputView otherwise hide.
+
  `IQPreviousNextDisplayModeAlwaysHide`
  Do not show NextPrevious buttons in any case.
  
  `IQPreviousNextDisplayModeAlwaysShow`
  Always show nextPrevious buttons,
- if there are more than 1 textField then both buttons will be visible but will be shown as disabled.
+ if there are more than 1 textInputView then both buttons will be visible but will be shown as disabled.
  */
 @available(iOSApplicationExtension, unavailable)
 @objc public enum IQPreviousNextDisplayMode: Int {

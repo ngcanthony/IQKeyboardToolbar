@@ -169,10 +169,10 @@ public extension IQKeyboardExtension where Base: UIView {
         let reloadInputViews: Bool = base?.inputAccessoryView != toolbar
         guard reloadInputViews else { return }
 
-        if let textField: UITextField = base as? UITextField {
-            textField.inputAccessoryView = toolbar
-        } else if let textView: UITextView = base as? UITextView {
-            textView.inputAccessoryView = toolbar
+        if let textInputView: UITextField = base as? UITextField {
+            textInputView.inputAccessoryView = toolbar
+        } else if let textInputView: UITextView = base as? UITextView {
+            textInputView.inputAccessoryView = toolbar
         }
         base?.reloadInputViews()
     }
