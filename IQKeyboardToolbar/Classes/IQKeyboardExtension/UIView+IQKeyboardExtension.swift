@@ -146,12 +146,12 @@ public extension IQKeyboardExtension where Base: UIView {
         //  Creating a toolBar for phoneNumber keyboard
         let toolbar: IQKeyboardToolbar = toolbar
 
-        let items: [UIBarButtonItem] = constructBarButtonItems(target: target, toolbar: toolbar,
-                                                               previousConfiguration: previousConfiguration,
-                                                               nextConfiguration: nextConfiguration,
-                                                               rightConfiguration: rightConfiguration,
-                                                               title: title,
-                                                               titleAccessibilityLabel: titleAccessibilityLabel)
+        let items: [UIBarButtonItem] = Self.constructBarButtonItems(target: target, toolbar: toolbar,
+                                                                    previousConfiguration: previousConfiguration,
+                                                                    nextConfiguration: nextConfiguration,
+                                                                    rightConfiguration: rightConfiguration,
+                                                                    title: title,
+                                                                    titleAccessibilityLabel: titleAccessibilityLabel)
 
         //  Adding button to toolBar.
         toolbar.items = items
@@ -289,13 +289,13 @@ public extension IQKeyboardExtension where Base: UIView {
 @MainActor
 private extension IQKeyboardExtension where Base: UIView {
 
-    private func constructBarButtonItems(target: AnyObject?,
-                                         toolbar: IQKeyboardToolbar,
-                                         previousConfiguration: IQBarButtonItemConfiguration? = nil,
-                                         nextConfiguration: IQBarButtonItemConfiguration? = nil,
-                                         rightConfiguration: IQBarButtonItemConfiguration? = nil,
-                                         title: String?,
-                                         titleAccessibilityLabel: String? = nil) -> [UIBarButtonItem] {
+    private static func constructBarButtonItems(target: AnyObject?,
+                                                toolbar: IQKeyboardToolbar,
+                                                previousConfiguration: IQBarButtonItemConfiguration? = nil,
+                                                nextConfiguration: IQBarButtonItemConfiguration? = nil,
+                                                rightConfiguration: IQBarButtonItemConfiguration? = nil,
+                                                title: String?,
+                                                titleAccessibilityLabel: String? = nil) -> [UIBarButtonItem] {
         var items: [UIBarButtonItem] = []
 
         if let previousConfiguration: IQBarButtonItemConfiguration = previousConfiguration {
