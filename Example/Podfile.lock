@@ -1,7 +1,7 @@
 PODS:
-  - IQKeyboardCore (1.0.0)
+  - IQKeyboardCore (1.0.3)
   - IQKeyboardToolbar (1.0.0):
-    - IQKeyboardCore
+    - IQKeyboardCore (= 1.0.3)
 
 DEPENDENCIES:
   - IQKeyboardToolbar (from `../`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IQKeyboardCore: 4c107a0b88b63a2808872f14b7faee351e39783d
-  IQKeyboardToolbar: f24b542843e18622a1b2369f7f9271eebe9ce5ae
+  IQKeyboardCore: 0adcddeac1349a2db3d3e5dd6635c9997c119c75
+  IQKeyboardToolbar: e5b68084243d7cc233c3a308c8c91cc25876d571
 
 PODFILE CHECKSUM: 7dc60a98e1294b95b482166fead7d83e9b8f1920
 

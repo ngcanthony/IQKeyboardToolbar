@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.7
 
 import PackageDescription
 
@@ -14,7 +14,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/hackiftekhar/IQKeyboardCore.git", from: "1.0.1"),
+        .package(url: "https://github.com/hackiftekhar/IQKeyboardCore.git", from: "1.0.3"),
     ],
     targets: [
         .target(name: "IQKeyboardToolbar",

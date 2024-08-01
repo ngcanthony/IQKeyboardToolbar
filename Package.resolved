@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hackiftekhar/IQKeyboardCore.git",
       "state" : {
-        "revision" : "efed059a4a30d59c7cc5da9caee7608e9e510edf",
-        "version" : "1.0.1"
+        "revision" : "53a17a41b79bf9fd6bc47369934467857cf3439a",
+        "version" : "1.0.3"
       }
     }
   ],

@@ -34,7 +34,7 @@ private struct AssociatedKeys {
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-public extension IQKeyboardExtension where Base: UIView {
+public extension IQKeyboardExtension where Base: IQTextInputView {
 
     // MARK: Toolbar
 
@@ -114,18 +114,15 @@ public extension IQKeyboardExtension where Base: UIView {
 
         guard !hidePlaceholder else { return nil }
 
-        if placeholder?.isEmpty == false {
-            return placeholder
-        } else if let placeholderable: any IQPlaceholderable = base as? (any IQPlaceholderable) {
+        guard placeholder?.isEmpty == true else { return placeholder }
 
-            if let placeholder = placeholderable.attributedPlaceholder?.string,
-                !placeholder.isEmpty {
-                return placeholder
-            } else if let placeholder = placeholderable.placeholder {
-                return placeholder
-            } else {
-                return nil
-            }
+        guard let placeholderable: any IQPlaceholderable = base as? (any IQPlaceholderable) else { return nil }
+
+        if let placeholder = placeholderable.attributedPlaceholder?.string,
+           !placeholder.isEmpty {
+            return placeholder
+        } else if let placeholder = placeholderable.placeholder {
+            return placeholder
         } else {
             return nil
         }
@@ -139,10 +136,7 @@ public extension IQKeyboardExtension where Base: UIView {
                     rightConfiguration: IQBarButtonItemConfiguration? = nil,
                     title: String?,
                     titleAccessibilityLabel: String? = nil) {
-
-        // If can't set InputAccessoryView. Then return
-        guard base?.responds(to: #selector(setter: UITextField.inputAccessoryView)) == true else { return }
-
+        guard let base = base else { return }
         //  Creating a toolBar for phoneNumber keyboard
         let toolbar: IQKeyboardToolbar = toolbar
 
@@ -156,25 +150,20 @@ public extension IQKeyboardExtension where Base: UIView {
         //  Adding button to toolBar.
         toolbar.items = items
 
-        if let textInput: any UITextInput = base as? (any UITextInput) {
-            switch textInput.keyboardAppearance {
-            case .dark?:
-                toolbar.barStyle = .black
-            default:
-                toolbar.barStyle = .default
-            }
+        switch base.keyboardAppearance {
+        case .dark:
+            toolbar.barStyle = .black
+        default:
+            toolbar.barStyle = .default
         }
 
         //  Setting toolbar to keyboard.
-        let reloadInputViews: Bool = base?.inputAccessoryView != toolbar
+        let reloadInputViews: Bool = base.inputAccessoryView != toolbar
         guard reloadInputViews else { return }
 
-        if let textInputView: UITextField = base as? UITextField {
-            textInputView.inputAccessoryView = toolbar
-        } else if let textInputView: UITextView = base as? UITextView {
-            textInputView.inputAccessoryView = toolbar
-        }
-        base?.reloadInputViews()
+        base.inputAccessoryView = toolbar
+
+        base.reloadInputViews()
     }
 
     // MARK: Right
@@ -287,7 +276,7 @@ public extension IQKeyboardExtension where Base: UIView {
 
 @available(iOSApplicationExtension, unavailable)
 @MainActor
-private extension IQKeyboardExtension where Base: UIView {
+private extension IQKeyboardExtension where Base: IQTextInputView {
 
     private static func constructBarButtonItems(target: AnyObject?,
                                                 toolbar: IQKeyboardToolbar,

@@ -20,13 +20,12 @@
         "ios": "13.0"
     },
     "swift_versions": [
-        "5.6",
         "5.7",
         "5.8",
         "5.9"
     ],
     "dependencies": {
-        "IQKeyboardCore": []
+        "IQKeyboardCore": ["1.0.3"]
     },
     "source_files": [
         "IQKeyboardToolbar/Classes/**/*.{swift}"
