@@ -114,7 +114,10 @@ public extension IQKeyboardExtension where Base: IQTextInputView {
 
         guard !hidePlaceholder else { return nil }
 
-        guard placeholder?.isEmpty == true else { return placeholder }
+        if let placeholder = placeholder,
+              !placeholder.isEmpty {
+            return placeholder
+        }
 
         guard let placeholderable: any IQPlaceholderable = base as? (any IQPlaceholderable) else { return nil }
 
