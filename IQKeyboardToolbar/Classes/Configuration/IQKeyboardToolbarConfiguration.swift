@@ -28,7 +28,7 @@ import UIKit
 @objc public final class IQKeyboardToolbarConfiguration: NSObject {
 
     /**
-     If YES, then uses textInputView's tintColor property for IQKeyboardToolbar,
+     If YES, then uses textInputView's tintColor property,
      otherwise tint color is default. Default is NO.
      */
     @objc public var useTextInputViewTintColor: Bool = false
@@ -85,3 +85,7 @@ import UIKit
         set {}
     }
 }
+
+@available(*, unavailable, renamed: "IQKeyboardToolbarConfiguration")
+@MainActor
+@objc public final class IQToolbarConfiguration: NSObject {}

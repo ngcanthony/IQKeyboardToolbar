@@ -29,7 +29,7 @@ import UIKit
 @objc public final class IQKeyboardToolbarPlaceholderConfiguration: NSObject {
 
     /**
-    If YES, then it add the textInputView's placeholder text on IQKeyboardToolbar. Default is YES.
+    If YES, then it add the textInputView's placeholder text on toolbar. Default is YES.
     */
     @objc public var showPlaceholder: Bool = true
 
@@ -54,3 +54,7 @@ import UIKit
     public override var accessibilityLabel: String? { didSet { } }
 }
 // swiftlint:enable type_name
+
+@available(*, unavailable, renamed: "IQKeyboardToolbarPlaceholderConfiguration")
+@MainActor
+@objc public final class IQToolbarPlaceholderConfiguration: NSObject {}

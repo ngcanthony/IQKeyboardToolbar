@@ -39,7 +39,7 @@ public extension IQKeyboardExtension where Base: IQTextInputView {
     // MARK: Toolbar
 
     /**
-     IQKeyboardToolbar references for better customization control.
+     Toolbar references for better customization control.
      */
     var toolbar: IQKeyboardToolbar {
         var toolbar: IQKeyboardToolbar? = base?.inputAccessoryView as? IQKeyboardToolbar
@@ -48,8 +48,8 @@ public extension IQKeyboardExtension where Base: IQTextInputView {
             toolbar = objc_getAssociatedObject(base, &AssociatedKeys.toolbar) as? IQKeyboardToolbar
         }
 
-        if let unwrappedToolbar: IQKeyboardToolbar = toolbar {
-            return unwrappedToolbar
+        if let toolbar: IQKeyboardToolbar = toolbar {
+            return toolbar
         } else {
 
             let width: CGFloat = base?.window?.windowScene?.screen.bounds.width ?? 0
@@ -269,7 +269,8 @@ public extension IQKeyboardExtension where Base: IQTextInputView {
                                                                  action: previousAction)
         let nextConfiguration = IQBarButtonItemConfiguration(image: chevronDown,
                                                              action: nextAction)
-        let rightConfiguration = IQBarButtonItemConfiguration(systemItem: .done, action: doneAction)
+        let rightConfiguration = IQBarButtonItemConfiguration(systemItem: .done,
+                                                              action: doneAction)
 
         addToolbar(target: target, previousConfiguration: previousConfiguration,
                    nextConfiguration: nextConfiguration, rightConfiguration: rightConfiguration,
