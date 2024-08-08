@@ -18,16 +18,36 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField1.iq.addPreviousNextDone(target: self, previousAction: #selector(textField1PreviousAction), nextAction: #selector(textField1NextAction), doneAction: #selector(doneAction), showPlaceholder: true)
 
-        textView1.iq.addPreviousNextRight(target: self, previousConfiguration: .init(title: "Prev", action: #selector(textView1PreviousAction)), nextConfiguration: .init(title: "Next", action: #selector(textView1NextAction)), rightConfiguration: .init(title: "OK", action: #selector(doneAction)), title: "Text View 1")
+        // Add Previous Next and Done button
+        textField1.iq.addPreviousNextDone(target: self,
+                                          previousAction: #selector(textField1PreviousAction),
+                                          nextAction: #selector(textField1NextAction),
+                                          doneAction: #selector(doneAction), showPlaceholder: true)
 
-        textField2.iq.addDone(target: self, action: #selector(doneAction), title: "Select Account")
-        textField2.iq.toolbar.titleBarButton.setTarget(self, action: #selector(selectAccount))
+        // Add Previous Next and Right button with customized titles or images
+        textView1.iq.addPreviousNextRight(target: self,
+                                          previousConfiguration: .init(title: "Prev", action: #selector(textView1PreviousAction)),
+                                          nextConfiguration: .init(title: "Next", action: #selector(textView1NextAction)),
+                                          rightConfiguration: .init(image: UIImage(systemName: "chevron.down")!, action: #selector(doneAction)),
+                                          title: "Text View 1")
 
+        textField2.iq.addDone(target: self,
+                              action: #selector(doneAction),
+                              title: "Select Account")
+
+        // Add an action to the title
+        textField2.iq.toolbar.titleBarButton.setTarget(self,
+                                                       action: #selector(selectAccount))
+
+        // Add additional leading and trailing items
         textView2.iq.toolbar.additionalLeadingItems = [.init(barButtonSystemItem: .add, target: self, action: #selector(addAction))]
         textView2.iq.toolbar.additionalTrailingItems = [.init(barButtonSystemItem: .camera, target: self, action: #selector(cameraAction))]
-        textView2.iq.addToolbar(target: self, previousConfiguration: nil, nextConfiguration: .init(title: "Next", action: #selector(doneAction)), rightConfiguration: .init(title: "Finish", action: #selector(doneAction)), title: "TextView 2")
+        textView2.iq.addToolbar(target: self,
+                                previousConfiguration: nil,
+                                nextConfiguration: .init(title: "Next", action: #selector(doneAction)),
+                                rightConfiguration: .init(title: "Finish", action: #selector(doneAction)),
+                                title: "TextView 2")
     }
 
     @IBAction private func doneAction() {

@@ -23,7 +23,7 @@
 
 import Foundation
 
-// MARK: IQAutoToolbarManageBehavior
+// MARK: IQKeyboardToolbarManageBehavior
 
 /**
 `IQAutoToolbarBySubviews`
@@ -36,6 +36,13 @@ Creates Toolbar according to tag property of textInputView's.
 Creates Toolbar according to the y,x position of textInputView in it's superview coordinate.
 */
 @available(iOSApplicationExtension, unavailable)
+@objc public enum IQKeyboardToolbarManageBehavior: Int {
+    case bySubviews
+    case byTag
+    case byPosition
+}
+
+@available(*, unavailable, renamed: "IQKeyboardToolbarManageBehavior")
 @objc public enum IQAutoToolbarManageBehavior: Int {
     case bySubviews
     case byTag

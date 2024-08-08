@@ -1,5 +1,4 @@
 import XCTest
-import IQKeyboardToolbar
 
 class Tests: XCTestCase {
     

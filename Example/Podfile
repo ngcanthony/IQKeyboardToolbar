@@ -4,10 +4,8 @@ platform :ios, '13.0'
 
 target 'IQKeyboardToolbar_Example' do
   pod 'IQKeyboardToolbar', :path => '../'
+end
 
-  target 'IQKeyboardToolbar_Tests' do
-    inherit! :search_paths
-
-    
-  end
+target 'IQKeyboardToolbar_ObjcExample' do
+  pod 'IQKeyboardToolbar', :path => '../'
 end
