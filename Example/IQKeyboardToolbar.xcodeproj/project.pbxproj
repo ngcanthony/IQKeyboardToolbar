@@ -376,9 +376,9 @@
 			productReference = 607FACE51AFB9204008FA782 /* IQKeyboardToolbar_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C01ED1642C6A467E004BA157 /* IQKeyboardToolbar */ = {
+		C01ED1642C6A467E004BA157 /* IQKeyboardToolbar-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01ED1702C6A467F004BA157 /* Build configuration list for PBXNativeTarget "IQKeyboardToolbar" */;
+			buildConfigurationList = C01ED1702C6A467F004BA157 /* Build configuration list for PBXNativeTarget "IQKeyboardToolbar-iOS" */;
 			buildPhases = (
 				C01ED1602C6A467E004BA157 /* Headers */,
 				C01ED1612C6A467E004BA157 /* Sources */,
@@ -389,7 +389,7 @@
 			);
 			dependencies = (
 			);
-			name = IQKeyboardToolbar;
+			name = "IQKeyboardToolbar-iOS";
 			productName = "IQKeyboardToolbar-iOS";
 			productReference = C01ED1652C6A467E004BA157 /* IQKeyboardToolbar.framework */;
 			productType = "com.apple.product-type.framework";
@@ -458,8 +458,8 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* IQKeyboardToolbar_Example */,
 				C0619FE82C64E6B600ED1F7D /* IQKeyboardToolbar_ObjcExample */,
-				C01ED1642C6A467E004BA157 /* IQKeyboardToolbar */,
 				607FACE41AFB9204008FA782 /* IQKeyboardToolbar_Tests */,
+				C01ED1642C6A467E004BA157 /* IQKeyboardToolbar-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -910,7 +910,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoenum.IQKeyboardToolbar-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = IQKeyboardToolbar;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -958,7 +958,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoenum.IQKeyboardToolbar-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = IQKeyboardToolbar;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1082,7 +1082,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01ED1702C6A467F004BA157 /* Build configuration list for PBXNativeTarget "IQKeyboardToolbar" */ = {
+		C01ED1702C6A467F004BA157 /* Build configuration list for PBXNativeTarget "IQKeyboardToolbar-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01ED16E2C6A467F004BA157 /* Debug */,
