@@ -15,8 +15,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		BF4BF1AAD734B5AA292B7A4F /* Pods_IQKeyboardToolbar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1D22330ED520329ED117BD /* Pods_IQKeyboardToolbar_Example.framework */; };
-		C01ED16B2C6A467E004BA157 /* IQKeyboardToolbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01ED1652C6A467E004BA157 /* IQKeyboardToolbar.framework */; };
-		C01ED16C2C6A467E004BA157 /* IQKeyboardToolbar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C01ED1652C6A467E004BA157 /* IQKeyboardToolbar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C01ED1882C6A475C004BA157 /* IQKeyboardToolbarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1742C6A475C004BA157 /* IQKeyboardToolbarConfiguration.swift */; };
 		C01ED1892C6A475C004BA157 /* UIView+IQKeyboardExtensionDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1762C6A475C004BA157 /* UIView+IQKeyboardExtensionDeprecated.swift */; };
 		C01ED18A2C6A475C004BA157 /* UIView+IQKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1772C6A475C004BA157 /* UIView+IQKeyboardExtension.swift */; };
@@ -48,28 +46,7 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = IQKeyboardToolbar;
 		};
-		C01ED1692C6A467E004BA157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C01ED1642C6A467E004BA157;
-			remoteInfo = "IQKeyboardToolbar-iOS";
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C01ED16D2C6A467F004BA157 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C01ED16C2C6A467E004BA157 /* IQKeyboardToolbar.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1773D54463D7E4C702837447 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -128,7 +105,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4BF1AAD734B5AA292B7A4F /* Pods_IQKeyboardToolbar_Example.framework in Frameworks */,
-				C01ED16B2C6A467E004BA157 /* IQKeyboardToolbar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,12 +348,10 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				2CDF47CFA81FEB08A0798975 /* [CP] Embed Pods Frameworks */,
-				C01ED16D2C6A467F004BA157 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C01ED16A2C6A467E004BA157 /* PBXTargetDependency */,
 			);
 			name = IQKeyboardToolbar_Example;
 			productName = IQKeyboardToolbar;
@@ -671,11 +645,6 @@
 			target = 607FACCF1AFB9204008FA782 /* IQKeyboardToolbar_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
-		C01ED16A2C6A467E004BA157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C01ED1642C6A467E004BA157 /* IQKeyboardToolbar */;
-			targetProxy = C01ED1692C6A467E004BA157 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -928,7 +897,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 CocoaPods. All rights reserved.";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -977,7 +946,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 CocoaPods. All rights reserved.";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
