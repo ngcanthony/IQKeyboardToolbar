@@ -107,7 +107,7 @@ public extension IQKeyboardExtension where Base: IQTextInputView {
     }
 
     /**
-     `drawingToolbarPlaceholder` will be actual text used to draw on toolbar. 
+     `drawingToolbarPlaceholder` will be actual text used to draw on toolbar.
      This would either `placeholder` or `toolbarPlaceholder`.
      */
     var drawingPlaceholder: String? {

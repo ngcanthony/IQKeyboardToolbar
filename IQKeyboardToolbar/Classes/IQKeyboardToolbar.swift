@@ -23,7 +23,7 @@
 
 import UIKit
 
-/** @abstract   IQKeyboardToolbar    */
+/** @abstract IQKeyboardToolbar.    */
 @available(iOSApplicationExtension, unavailable)
 @MainActor
 @objcMembers open class IQKeyboardToolbar: UIToolbar {
@@ -183,8 +183,3 @@ import UIKit
         return true
     }
 }
-
-
-@available(*, unavailable, renamed: "IQKeyboardToolbar")
-@MainActor
-@objcMembers public final class IQToolbar: NSObject {}

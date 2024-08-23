@@ -28,8 +28,8 @@ import UIKit
 @MainActor
 @objc public protocol IQPlaceholderable: AnyObject {
 
-    @objc var placeholder: String? { get set }
-    @objc var attributedPlaceholder: NSAttributedString? { get set }
+    var placeholder: String? { get set }
+    var attributedPlaceholder: NSAttributedString? { get set }
 }
 
 @available(iOSApplicationExtension, unavailable)

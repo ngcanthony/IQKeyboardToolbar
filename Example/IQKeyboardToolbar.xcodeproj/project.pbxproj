@@ -15,7 +15,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		BF4BF1AAD734B5AA292B7A4F /* Pods_IQKeyboardToolbar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1D22330ED520329ED117BD /* Pods_IQKeyboardToolbar_Example.framework */; };
-		C01ED1882C6A475C004BA157 /* IQKeyboardToolbarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1742C6A475C004BA157 /* IQKeyboardToolbarConfiguration.swift */; };
 		C01ED1892C6A475C004BA157 /* UIView+IQKeyboardExtensionDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1762C6A475C004BA157 /* UIView+IQKeyboardExtensionDeprecated.swift */; };
 		C01ED18A2C6A475C004BA157 /* UIView+IQKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1772C6A475C004BA157 /* UIView+IQKeyboardExtension.swift */; };
 		C01ED18B2C6A475C004BA157 /* UIView+IQKeyboardExtensionObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1782C6A475C004BA157 /* UIView+IQKeyboardExtensionObjc.swift */; };
@@ -23,7 +22,6 @@
 		C01ED18D2C6A475C004BA157 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED17B2C6A475C004BA157 /* IQBarButtonItem.swift */; };
 		C01ED18E2C6A475C004BA157 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED17C2C6A475C004BA157 /* IQInvocation.swift */; };
 		C01ED18F2C6A475C004BA157 /* IQBarButtonItemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED17D2C6A475C004BA157 /* IQBarButtonItemConfiguration.swift */; };
-		C01ED1902C6A475C004BA157 /* IQKeyboardToolbarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED17F2C6A475C004BA157 /* IQKeyboardToolbarConstants.swift */; };
 		C01ED1922C6A475C004BA157 /* IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1812C6A475C004BA157 /* IQKeyboardToolbar.swift */; };
 		C01ED1932C6A475C004BA157 /* IQPlaceholderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1832C6A475C004BA157 /* IQPlaceholderable.swift */; };
 		C01ED1942C6A475C004BA157 /* IQKeyboardToolbarPlaceholderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ED1842C6A475C004BA157 /* IQKeyboardToolbarPlaceholderConfiguration.swift */; };
@@ -66,7 +64,6 @@
 		70288EC8160F89EFE0D5C3EC /* Pods-IQKeyboardToolbar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IQKeyboardToolbar_Example.release.xcconfig"; path = "Target Support Files/Pods-IQKeyboardToolbar_Example/Pods-IQKeyboardToolbar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7BEC2C7A54AB0A30E065A752 /* Pods-IQKeyboardToolbar_ObjcExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IQKeyboardToolbar_ObjcExample.release.xcconfig"; path = "Target Support Files/Pods-IQKeyboardToolbar_ObjcExample/Pods-IQKeyboardToolbar_ObjcExample.release.xcconfig"; sourceTree = "<group>"; };
 		C01ED1652C6A467E004BA157 /* IQKeyboardToolbar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardToolbar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C01ED1742C6A475C004BA157 /* IQKeyboardToolbarConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardToolbarConfiguration.swift; sourceTree = "<group>"; };
 		C01ED1762C6A475C004BA157 /* UIView+IQKeyboardExtensionDeprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IQKeyboardExtensionDeprecated.swift"; sourceTree = "<group>"; };
 		C01ED1772C6A475C004BA157 /* UIView+IQKeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IQKeyboardExtension.swift"; sourceTree = "<group>"; };
 		C01ED1782C6A475C004BA157 /* UIView+IQKeyboardExtensionObjc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IQKeyboardExtensionObjc.swift"; sourceTree = "<group>"; };
@@ -74,12 +71,9 @@
 		C01ED17B2C6A475C004BA157 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
 		C01ED17C2C6A475C004BA157 /* IQInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQInvocation.swift; sourceTree = "<group>"; };
 		C01ED17D2C6A475C004BA157 /* IQBarButtonItemConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItemConfiguration.swift; sourceTree = "<group>"; };
-		C01ED17F2C6A475C004BA157 /* IQKeyboardToolbarConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardToolbarConstants.swift; sourceTree = "<group>"; };
-		C01ED1802C6A475C004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C01ED1812C6A475C004BA157 /* IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardToolbar.swift; sourceTree = "<group>"; };
 		C01ED1832C6A475C004BA157 /* IQPlaceholderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPlaceholderable.swift; sourceTree = "<group>"; };
 		C01ED1842C6A475C004BA157 /* IQKeyboardToolbarPlaceholderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardToolbarPlaceholderConfiguration.swift; sourceTree = "<group>"; };
-		C01ED1862C6A475C004BA157 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C01ED1872C6A475C004BA157 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C01ED1972C6A4885004BA157 /* IQKeyboardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IQKeyboardCore.xcframework; path = ../Carthage/Build/IQKeyboardCore.xcframework; sourceTree = "<group>"; };
 		C0619FE92C64E6B600ED1F7D /* IQKeyboardToolbar_ObjcExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQKeyboardToolbar_ObjcExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,23 +236,12 @@
 		C01ED1722C6A475C004BA157 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C01ED1732C6A475C004BA157 /* Configuration */,
 				C01ED1752C6A475C004BA157 /* IQKeyboardExtension */,
 				C01ED1792C6A475C004BA157 /* IQBarButtonItem */,
-				C01ED17E2C6A475C004BA157 /* Constants */,
-				C01ED1802C6A475C004BA157 /* .gitkeep */,
 				C01ED1812C6A475C004BA157 /* IQKeyboardToolbar.swift */,
 				C01ED1822C6A475C004BA157 /* Placeholder */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		C01ED1732C6A475C004BA157 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				C01ED1742C6A475C004BA157 /* IQKeyboardToolbarConfiguration.swift */,
-			);
-			path = Configuration;
 			sourceTree = "<group>";
 		};
 		C01ED1752C6A475C004BA157 /* IQKeyboardExtension */ = {
@@ -282,14 +265,6 @@
 			path = IQBarButtonItem;
 			sourceTree = "<group>";
 		};
-		C01ED17E2C6A475C004BA157 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				C01ED17F2C6A475C004BA157 /* IQKeyboardToolbarConstants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		C01ED1822C6A475C004BA157 /* Placeholder */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,7 +277,6 @@
 		C01ED1852C6A475C004BA157 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C01ED1862C6A475C004BA157 /* .gitkeep */,
 				C01ED1872C6A475C004BA157 /* PrivacyInfo.xcprivacy */,
 			);
 			path = Assets;
@@ -347,6 +321,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				C0620C442C746BC2006AE1CE /* Swiftlint */,
 				2CDF47CFA81FEB08A0798975 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -565,6 +540,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0620C442C746BC2006AE1CE /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		C6310D4719FE54D7CD4C85B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -618,9 +611,7 @@
 				C01ED18F2C6A475C004BA157 /* IQBarButtonItemConfiguration.swift in Sources */,
 				C01ED1922C6A475C004BA157 /* IQKeyboardToolbar.swift in Sources */,
 				C01ED18B2C6A475C004BA157 /* UIView+IQKeyboardExtensionObjc.swift in Sources */,
-				C01ED1882C6A475C004BA157 /* IQKeyboardToolbarConfiguration.swift in Sources */,
 				C01ED1932C6A475C004BA157 /* IQPlaceholderable.swift in Sources */,
-				C01ED1902C6A475C004BA157 /* IQKeyboardToolbarConstants.swift in Sources */,
 				C01ED18A2C6A475C004BA157 /* UIView+IQKeyboardExtension.swift in Sources */,
 				C01ED18C2C6A475C004BA157 /* IQTitleBarButtonItem.swift in Sources */,
 			);

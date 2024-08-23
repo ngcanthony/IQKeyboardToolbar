@@ -27,9 +27,12 @@ class ViewController: UIViewController {
 
         // Add Previous Next and Right button with customized titles or images
         textView1.iq.addPreviousNextRight(target: self,
-                                          previousConfiguration: .init(title: "Prev", action: #selector(textView1PreviousAction)),
-                                          nextConfiguration: .init(title: "Next", action: #selector(textView1NextAction)),
-                                          rightConfiguration: .init(image: UIImage(systemName: "chevron.down")!, action: #selector(doneAction)),
+                                          previousConfiguration: .init(title: "Prev",
+                                                                       action: #selector(textView1PreviousAction)),
+                                          nextConfiguration: .init(title: "Next",
+                                                                   action: #selector(textView1NextAction)),
+                                          rightConfiguration: .init(image: UIImage(systemName: "chevron.down")!,
+                                                                    action: #selector(doneAction)),
                                           title: "Text View 1")
 
         textField2.iq.addDone(target: self,
@@ -41,8 +44,12 @@ class ViewController: UIViewController {
                                                        action: #selector(selectAccount))
 
         // Add additional leading and trailing items
-        textView2.iq.toolbar.additionalLeadingItems = [.init(barButtonSystemItem: .add, target: self, action: #selector(addAction))]
-        textView2.iq.toolbar.additionalTrailingItems = [.init(barButtonSystemItem: .camera, target: self, action: #selector(cameraAction))]
+        textView2.iq.toolbar.additionalLeadingItems = [.init(barButtonSystemItem: .add,
+                                                             target: self,
+                                                             action: #selector(addAction))]
+        textView2.iq.toolbar.additionalTrailingItems = [.init(barButtonSystemItem: .camera,
+                                                              target: self, action:
+                                                                #selector(cameraAction))]
         textView2.iq.addToolbar(target: self,
                                 previousConfiguration: nil,
                                 nextConfiguration: .init(title: "Next", action: #selector(doneAction)),
@@ -55,14 +62,16 @@ class ViewController: UIViewController {
     }
 
     @objc func addAction() {
-        let alertController = UIAlertController(title: "Plus Action", message: "You tapped on Plus", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Plus Action",
+                                                message: "You tapped on Plus", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         alertController.popoverPresentationController?.sourceView = textField2
         self.present(alertController, animated: true, completion: nil)
     }
 
     @objc func cameraAction() {
-        let alertController = UIAlertController(title: "Camera Action", message: "You tapped on Camera", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Camera Action",
+                                                message: "You tapped on Camera", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         alertController.popoverPresentationController?.sourceView = textField2
         self.present(alertController, animated: true, completion: nil)
