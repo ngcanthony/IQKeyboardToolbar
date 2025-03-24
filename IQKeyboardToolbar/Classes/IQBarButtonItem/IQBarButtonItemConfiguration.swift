@@ -87,7 +87,7 @@ import UIKit
 
             newBarButtonItem.invocation = oldBarButtonItem.invocation
             newBarButtonItem.accessibilityLabel = accessibilityLabel
-            newBarButtonItem.accessibilityIdentifier = oldBarButtonItem.accessibilityLabel
+            newBarButtonItem.accessibilityIdentifier = newBarButtonItem.accessibilityLabel
             newBarButtonItem.isEnabled = oldBarButtonItem.isEnabled
             newBarButtonItem.tag = oldBarButtonItem.tag
         }
