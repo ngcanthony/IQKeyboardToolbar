@@ -134,12 +134,12 @@ import UIKit
 
                 if let target = invocation?.target, let action = invocation?.action {
                     titleBarButton.isEnabled = true
-                    titleBarButton.titleButton?.isEnabled = true
-                    titleBarButton.titleButton?.addTarget(target, action: action, for: .touchUpInside)
+                    titleBarButton.titleButton.isEnabled = true
+                    titleBarButton.titleButton.addTarget(target, action: action, for: .touchUpInside)
                 } else {
                     titleBarButton.isEnabled = false
-                    titleBarButton.titleButton?.isEnabled = false
-                    titleBarButton.titleButton?.removeTarget(nil, action: nil, for: .touchUpInside)
+                    titleBarButton.titleButton.isEnabled = false
+                    titleBarButton.titleButton.removeTarget(nil, action: nil, for: .touchUpInside)
                 }
             }
         }
