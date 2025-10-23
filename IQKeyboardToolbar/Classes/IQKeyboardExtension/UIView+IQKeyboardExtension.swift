@@ -324,30 +324,33 @@ private extension IQKeyboardExtension where Base: IQTextInputView {
 
         // Title bar button item
         do {
+            if let title = title, !title.isEmpty {
 #if compiler(>=6.2) // Xcode 26
-            if #available(iOS 26.0, *) {
-                if !items.isEmpty {
+                if #available(iOS 26.0, *) {
+                    if !items.isEmpty {
+                        items.append(IQBarButtonItem.flexibleBarButtonItem)
+                    }
+                } else {
                     items.append(IQBarButtonItem.flexibleBarButtonItem)
                 }
-            } else {
-                items.append(IQBarButtonItem.flexibleBarButtonItem)
-            }
 #else
-            items.append(IQBarButtonItem.flexibleBarButtonItem)
+                items.append(IQBarButtonItem.flexibleBarButtonItem)
 #endif
 
-            // Title button
-            toolbar.titleBarButton.title = title
-            toolbar.titleBarButton.accessibilityLabel = titleAccessibilityLabel
-            toolbar.titleBarButton.accessibilityIdentifier = titleAccessibilityLabel
+                // Title button
+                toolbar.titleBarButton.title = title
+                toolbar.titleBarButton.accessibilityLabel = titleAccessibilityLabel
+                toolbar.titleBarButton.accessibilityIdentifier = titleAccessibilityLabel
 
-            toolbar.titleBarButton.customView?.frame = .zero
+                toolbar.titleBarButton.customView?.frame = .zero
 
-            items.append(toolbar.titleBarButton)
+                items.append(toolbar.titleBarButton)
+            }
 
             // Flexible space
             items.append(IQBarButtonItem.flexibleBarButtonItem)
         }
+
 
         if !toolbar.additionalTrailingItems.isEmpty {
             items.append(contentsOf: toolbar.additionalTrailingItems)
