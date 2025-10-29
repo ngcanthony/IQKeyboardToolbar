@@ -32,7 +32,7 @@ import UIKit
                                      target: nil, action: nil)
 #if compiler(>=6.2) // Xcode 26
         if #available(iOS 26.0, *) {
-            barButton.hidesSharedBackground = false
+            barButton.hidesSharedBackground = true
         }
 #endif
         return barButton

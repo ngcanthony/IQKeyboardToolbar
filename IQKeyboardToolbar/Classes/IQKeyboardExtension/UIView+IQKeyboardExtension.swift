@@ -177,6 +177,19 @@ public extension IQKeyboardExtension where Base: IQTextInputView {
 
         base.inputAccessoryView = toolbar
 
+#if compiler(>=6.2) // Xcode 26
+        if #available(iOS 26.0, *) {
+            if let inputAccessoryView = base.inputAccessoryView, inputAccessoryView.interactions.isEmpty {
+                if let scrollView = base.iq.superviewOf(type: UIScrollView.self) {
+                    let toolbarInteraction = UIScrollEdgeElementContainerInteraction()
+                    toolbarInteraction.scrollView = scrollView
+                    toolbarInteraction.edge = .bottom
+                    base.inputAccessoryView?.addInteraction(toolbarInteraction)
+                }
+            }
+        }
+#endif
+        
         base.reloadInputViews()
     }
 

@@ -170,6 +170,33 @@ import UIKit
             }
         }
     }
+    
+    override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let view = super.hitTest(point, with: event)
+        
+#if compiler(>=6.2) // Xcode 26
+        if #available(iOS 26.0, *) {
+            // Allows taps on empty areas of the toolbar to be passed down
+            if let view = view {
+                if view is UIButton {
+                    return view
+                }
+                
+                for subview in view.subviews {
+                    if subview is UIButton {
+                        return view
+                    }
+                }
+            }
+            
+            return nil
+        } else {
+            return view
+        }
+#else
+        return view
+#endif
+    }
 }
 
 @available(iOSApplicationExtension, unavailable)
